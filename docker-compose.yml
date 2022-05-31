@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: ./infra/go
+    tty: true
+    volumes:
+      - ./server:/go/src
+    ports:
+      - "3000:8080"
